@@ -1,14 +1,11 @@
 pipeline {
-
-  agent any
-  stages {
-
-    stage('git checkout') {
-    steps {
-    script {
-              printIn "Hello all welcome to pipelinescripting"
+    agent any
+    stages {
+        stage('git checkout') {
+            steps {
+                printIn "Hello all welcome to pipelinescripting"
+                sh 'echo "This is a shell command output."'
             }
         }
     }
   }
-}
