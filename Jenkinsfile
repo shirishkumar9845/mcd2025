@@ -4,8 +4,8 @@ pipeline {
   stages {
 
     stage('git checkout') {
-        steps {
-            script {
+    steps {
+    script {
               printIn "Hello all welcome to pipelinescripting"
             }
         }
