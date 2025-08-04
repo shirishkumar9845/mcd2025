@@ -2,6 +2,9 @@ pipeline {
     agent any
     parameters {
        choice choices: ['dev', 'sit', 'preprod', 'prod'], description: 'my environment', name: 'ENV'
+    }my current workspace is 
+    environment {
+    JAVA_HOME = "/usr/bin/java"
     }
     stages {
         stage('git checkout') {
@@ -11,6 +14,8 @@ pipeline {
                var1=20
                println "myvar1 value is ${var1}" 
                println "value of my selected environment is ${params.ENV}"
+               println "my java path is ${env.JAVA_HOME}"
+               println "my currentr workspace is ${WORKSPACE}"
             }
         }
     }
