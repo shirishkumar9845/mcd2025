@@ -4,7 +4,7 @@ pipeline {
         stage('git checkout') {
             steps {
               script {
-                printIn ("Hello all welcome to pipelinescripting")
+               echo  'Hello all welcome to pipelinescripting'
             }
         }
     }
