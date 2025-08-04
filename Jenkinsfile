@@ -4,7 +4,9 @@ pipeline {
         stage('git checkout') {
             steps {
               script {
-               echo  'Hello all welcome to pipelinescripting'
+               println  "(Hello all welcome to pipelinescripting)"
+               var1=20
+               println "myvar1 value is ${var1}"   
             }
         }
     }
