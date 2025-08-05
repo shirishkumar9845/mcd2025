@@ -1,23 +1,20 @@
 pipeline {
     agent any
-    parameters {
-       choice choices: ['dev', 'sit', 'preprod', 'prod'], description: 'my environment', name: 'ENV'
-    } 
-    environment {
-    JAVA_HOME = "/usr/bin/java"
-    }
     stages {
-        stage('git checkout') {
+        stage('working with conditions') {
             steps {
               script {
-               println  "(Hello all welcome to pipelinescripting)"
-               var1=20
-               println "myvar1 value is ${var1}" 
-               println "value of my selected environment is ${params.ENV}"
-               println "my java path is ${env.JAVA_HOME}"
-               println "my current workspace is ${WORKSPACE}"
+            a = 10
+            b = 20
+            if ( a > b) {
+                println "value ${a} is big"
             }
+             else {
+                println "value ${b} is big"
+             }
+            
         }
     }
-  }
+   }
+ }
 }
