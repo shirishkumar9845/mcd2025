@@ -5,7 +5,7 @@ pipeline {
             steps {
               script {
                 for(i=1;i<=5;i++)
-                  println "my i value is $(i)"
+                  println "my i value is ${i}"
               }
                 def lis1=["devops","aws","scripting"]
                 for (ele in lis1) {
