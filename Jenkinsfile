@@ -4,7 +4,7 @@ pipeline {
         stage('working with loops') {
             steps {
               script {
-                for(i=1;i<=5;i++)
+                for(i=1;i<=5;i++) {
                   println "my i value is ${i}"
                 }
                 lis1=["devops","aws","scripting"]
@@ -16,6 +16,7 @@ pipeline {
                     println "my j value is ${j}"
                     j = j +1
                 }
+            }
         }
     }
    }
