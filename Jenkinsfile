@@ -1,20 +1,17 @@
-def mysum(a,b){
-    sum = a + b
-    sub = a - b
-    println "sum of a & b is ${sum}"
-    println "sub of a & b is ${sub}"
-}
-
 pipeline {
     agent any
     stages {
-        stage('working with functions') {
+        stage('working with fileoperations') {
             steps {
               script {
-                mysum(200,400)
-                mysub(400,240)
+                 println "reading the content of file"
+                  File file = new file("/tmp/mydata.txt")
+                 println "my file content is ${file.readLines()}"
+                  for (line in file.readLines) {
+                 println "my line is ${line}"
                 }
             }
         }
     }
    }
+}
