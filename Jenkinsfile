@@ -2,6 +2,7 @@ def mysum(a,b){
     sum = a + b
     sub = a - b
     println "sum of a & b is ${sum}"
+    println "sub of a & b is ${sub}"
 }
 
 pipeline {
