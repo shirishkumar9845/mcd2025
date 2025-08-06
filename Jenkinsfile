@@ -5,7 +5,7 @@ pipeline {
             steps {
               script {
                  println "reading the content of file"
-                  File file = new file("/tmp/mydata.txt")
+                  File file = new File("/tmp/mydata.txt")
                  println "my file content is ${file.readLines()}"
                   for (line in file.readLines) {
                  println "my line is ${line}"
