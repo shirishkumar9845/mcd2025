@@ -1,23 +1,19 @@
+def mysum(a,b){
+    sum = a + b
+    sub = a - b
+    println "sum of a & b is ${sum}"
+}
+
 pipeline {
     agent any
     stages {
-        stage('working with loops') {
+        stage('working with functions') {
             steps {
               script {
-                for(i=1;i<=5;i++) {
-                  println "my i value is ${i}"
-                }
-                lis1=["devops","aws","scripting"]
-                for (ele in lis1) {
-                    println "my list element is ${ele}"
-                }
-                j=1
-                while (j <= 5){
-                    println "my j value is ${j}"
-                    j = j +1
+                mysum(200,400)
+                mysub(400,240)
                 }
             }
         }
     }
    }
- }
